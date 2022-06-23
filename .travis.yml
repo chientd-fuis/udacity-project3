@@ -19,7 +19,7 @@ script:
   - docker tag udagram-api-feed tdchien96/udagram-api-feed:v1 #feed
   - docker tag udagram-api-user tdchien96/udagram-api-user:v1 #user
   - docker tag udagram-frontend:local tdchien96/udagram-frontend:v1 #frontend
-  - docker tag udagram-reverseproxy tdchien96/reverseproxy:v1 #reverseproxy
+  - docker tag reverseproxy tdchien96/reverseproxy:v1 #reverseproxy
 
 after_success:
   - docker images
@@ -27,5 +27,5 @@ after_success:
   - docker push tdchien96/udagram-api-feed:udagram-api-feed
   - docker push tdchien96/udagram-api-user:udagram-api-user
   - docker push tdchien96/udagram-frontend:udagram-frontend
-  - docker push tdchien96/reverseproxy:udagram-reverseproxy
+  - docker push tdchien96/reverseproxy:reverseproxy
 
