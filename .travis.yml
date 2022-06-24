@@ -27,13 +27,18 @@ after_success:
   - docker push tdchien96/udagram-api-user:v2
   - docker push tdchien96/udagram-frontend:v2
   - docker push tdchien96/reverseproxy:v2
-  # deploy:
-  #   script:
-  #   - kubectl apply -f aws-secret.yaml
-  #   - kubectl apply -f env-secret.yaml
-  #   - kubectl apply -f env-configmap.yaml
-  #   on:
-  #     branch: master
+  deploy:
+    script:
+    - kubectl apply -f backend-user-deployment.yaml
+    - kubectl apply -f backend-feed-deployment.yaml
+    - kubectl apply -f frontend-deployment.yaml
+    - kubectl apply -f reverseproxy-deployment.yaml
+    - kubectl apply -f backend-user-service.yaml
+    - kubectl apply -f backend-feed-service.yaml
+    - kubectl apply -f frontend-service.yaml
+    - kubectl apply -f reverseproxy-service.yaml
+    on:
+      branch: master
 
 # deploy:
 #   provider: script
