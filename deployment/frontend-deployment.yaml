@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: tdchien96/udagram-frontend:v2
+        image: tdchien96/udagram-frontend:v3
         ports:
         - containerPort: 8100
 
