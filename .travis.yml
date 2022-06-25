@@ -16,17 +16,17 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker-compose -f docker-compose-build.yaml build --parallel
-  - docker tag udagram-api-feed tdchien96/udagram-api-feed:v4 #feed
-  - docker tag udagram-api-user tdchien96/udagram-api-user:v4 #user
-  - docker tag udagram-frontend:local tdchien96/udagram-frontend:v4 #frontend
-  - docker tag reverseproxy tdchien96/reverseproxy:v4 #reverseproxy
+  - docker tag udagram-api-feed tdchien96/udagram-api-feed:latest #feed
+  - docker tag udagram-api-user tdchien96/udagram-api-user:latest #user
+  - docker tag udagram-frontend:local tdchien96/udagram-frontend:latest #frontend
+  - docker tag reverseproxy tdchien96/reverseproxy:latest #reverseproxy
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push tdchien96/udagram-api-feed:v4
-  - docker push tdchien96/udagram-api-user:v4
-  - docker push tdchien96/udagram-frontend:v4
-  - docker push tdchien96/reverseproxy:v4
+  - docker push tdchien96/udagram-api-feed:latest
+  - docker push tdchien96/udagram-api-user:latest
+  - docker push tdchien96/udagram-frontend:latest
+  - docker push tdchien96/reverseproxy:latest
 
   # - kubectl apply -f backend-user-deployment.yaml
   # - kubectl apply -f backend-feed-deployment.yaml

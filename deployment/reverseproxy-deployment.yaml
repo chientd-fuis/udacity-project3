@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: tdchien96/reverseproxy:v4
+        image: tdchien96/reverseproxy:latest
         imagePullPolicy: Always       
         ports:
         - containerPort: 8080   
