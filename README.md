@@ -10,7 +10,9 @@
 * file txt
 ![a link](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/describe-services.txt)
 #### Use a reverse proxy to direct requests to the appropriate backend
+* Get API
 ![alt text](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/reverse-proxy.png?raw=true)
+* LOG
 ![alt text](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/reverseproxy-redirect.png?raw=true)
 ##### Configure scaling and self-healing for each service
 <!-- ![alt text](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/travis.png?raw=true) -->
