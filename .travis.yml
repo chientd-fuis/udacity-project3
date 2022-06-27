@@ -36,6 +36,10 @@ after_success:
   # - kubectl apply -f backend-feed-service.yaml
   # - kubectl apply -f frontend-service.yaml
   # - kubectl apply -f reverseproxy-service.yaml
+  - kubectl get svc
+  - kubectl get all
+  - kubectl autoscale deployment backend-feed-app --cpu-percent=70 --min=3 --max=5
+  - kubectl get hpa
 
 
 # deploy:
