@@ -1,0 +1,146 @@
+Name:              backend-feed
+Namespace:         default
+Labels:            app=backend-feed-app
+Annotations:       <none>
+Selector:          app=backend-feed-app
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.0.112.148
+IPs:               10.0.112.148
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.14.209:8080,172.31.34.162:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              backend-user
+Namespace:         default
+Labels:            app=backend-user-app
+Annotations:       <none>
+Selector:          app=backend-user-app
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.0.33.239
+IPs:               10.0.33.239
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.3.177:8080,172.31.35.126:8080,172.31.9.59:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     frontend-app-svc
+Namespace:                default
+Labels:                   app=frontend-app
+Annotations:              <none>
+Selector:                 app=frontend-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.0.132.240
+IPs:                      10.0.132.240
+LoadBalancer Ingress:     aa329415f6beb455b894b93a2e31d9d1-1742327619.us-east-2.elb.amazonaws.com
+Port:                     <unset>  8100/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  32116/TCP
+Endpoints:                172.31.1.4:80,172.31.39.93:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age   From                Message
+  ----    ------                ----  ----                -------
+  Normal  EnsuringLoadBalancer  14m   service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   14m   service-controller  Ensured load balancer
+
+
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.0.0.1
+IPs:               10.0.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         172.31.17.2:443,172.31.41.227:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     publicfrontend
+Namespace:                default
+Labels:                   app=frontend-app
+Annotations:              <none>
+Selector:                 app=frontend-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.0.218.245
+IPs:                      10.0.218.245
+LoadBalancer Ingress:     a44f677137d0b4424826364f80f1441c-1833530919.us-east-2.elb.amazonaws.com
+Port:                     <unset>  8100/TCP
+TargetPort:               8100/TCP
+NodePort:                 <unset>  30350/TCP
+Endpoints:                172.31.1.4:8100,172.31.39.93:8100
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age   From                Message
+  ----    ------                ----  ----                -------
+  Normal  EnsuringLoadBalancer  11m   service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   11m   service-controller  Ensured load balancer
+
+
+Name:                     publicproxy
+Namespace:                default
+Labels:                   app=reverseproxy-app
+Annotations:              <none>
+Selector:                 app=reverseproxy-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.0.80.34
+IPs:                      10.0.80.34
+LoadBalancer Ingress:     a3b86e20e7a39438e9f90221a0ed94be-1233752930.us-east-2.elb.amazonaws.com
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  31844/TCP
+Endpoints:                172.31.0.49:8080,172.31.42.240:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age   From                Message
+  ----    ------                ----  ----                -------
+  Normal  EnsuringLoadBalancer  11m   service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   11m   service-controller  Ensured load balancer
+
+
+Name:                     reverseproxy-app-svc
+Namespace:                default
+Labels:                   app=reverseproxy-app
+Annotations:              <none>
+Selector:                 app=reverseproxy-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.0.88.128
+IPs:                      10.0.88.128
+LoadBalancer Ingress:     abc8bc4e99b8645eeb423ccd27973635-914229865.us-east-2.elb.amazonaws.com
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  31448/TCP
+Endpoints:                172.31.0.49:8080,172.31.42.240:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age   From                Message
+  ----    ------                ----  ----                -------
+  Normal  EnsuringLoadBalancer  14m   service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   14m   service-controller  Ensured load balancer
