@@ -18,3 +18,6 @@
 ![alt text](https://github.com/chientd-fuis/udacity-project3/blob/master/screenshots/hpa.png?raw=true)
 ###### Use logs to capture metrics for debugging a microservices deployment
 ![alt text](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/api.png?raw=true)
+
+###### FIXED COMMENT
+![alt text](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/fix-comment.png?raw=true)
