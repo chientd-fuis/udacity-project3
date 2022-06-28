@@ -15,6 +15,6 @@
 * LOG
 ![alt text](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/reverseproxy-redirect.png?raw=true)
 ##### Configure scaling and self-healing for each service
-![alt text](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/hpa.png?raw=true)
+![alt text](https://github.com/chientd-fuis/udacity-project3/blob/master/screenshots/hp2a.png?raw=true)
 ###### Use logs to capture metrics for debugging a microservices deployment
 ![alt text](https://github.com/chientd-fuis/udacity-project3/blob/develop/screenshots/api.png?raw=true)
